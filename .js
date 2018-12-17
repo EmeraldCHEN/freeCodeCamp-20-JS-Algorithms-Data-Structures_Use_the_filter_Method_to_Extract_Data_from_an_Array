@@ -1,4 +1,6 @@
-// the global variable
+// The variable watchList holds an array of objects with information on several movies. 
+// Use a combination of filter and map to return a new array of objects with only title and rating keys, but where imdbRating is greater than or equal to 8.0. 
+
 var watchList = [
   {  
     "Title": "Inception",
@@ -112,5 +114,20 @@ var watchList = [
  }
 ];
 
+
+// Use Array.prototype.filte to filter the array so it’s left with elements that have imdbRating > 8.0
+
+// Use Array.prototype.map to shape the output to the desired format
+
 let filteredList1 = watchList.filter(item => parseInt(item["imdbRating"]) >= 8).map(item => ({"title":item["Title"], "rating":item["imdbRating"] }));
 let filteredList2 = watchList.map(item => ({'title': item["Title"], 'rating': item["imdbRating"]})).filter(rate => rate.rating >= 8);
+
+
+
+
+
+// Retrieved from
+// https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array/
+
+
+
